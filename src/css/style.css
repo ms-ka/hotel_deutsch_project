@@ -395,7 +395,7 @@ td a:hover {
 .accordion-body {
   background-color: #545454;
   /* Цвет фона содержимого */
-  color: #ddd;
+  color: white;
   /* Цвет текста содержимого */
 }
 
