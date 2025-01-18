@@ -1,0 +1,22 @@
+# Webserver
+-Subdomain eingerichtet auf unserer Familien Domain ervnet.de:
+  projekt01.ervnet.de
+- Webseiten Link: https://projekt01.ervnet.de
+- öffentlich, aber suchmaschinen (Google) sind über die robots.txt verboten
+
+## Gitlab
+- gitlab Repository eingerichte, Zugriff nur laari  git@gitlab.ervnet.de:sites/projekt01.git
+- auf unserem https://gitlab.ervnet.de
+- Wenn andere darau zugreifen sollen, muss ich die User einrichten (email, name) Sie bekommen dann einen Link über den sie zugreifen können.
+- Eine CI/CD Pipeline kopiert bei einem Push im main die Inhalte auf den Webserver
+
+## Anmeldung Gitlab / ssh key
+
+## Entwicklung
+1. Repository clonen
+2. Vor einer Bearbeitung fetchen/pullen oder in Code "sync Changes"
+3. Änderungen machen, lokal testen
+4. Commit mit den Änderungen erstellen (aussagekräftige Commit Message)
+5. git push oder in Code "sync Changes"
+
+

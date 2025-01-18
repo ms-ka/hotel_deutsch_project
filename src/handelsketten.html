@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handelsketten in Deutschland</title>
+  <style>
+    /* Обнуляем отступы и добавляем базовые стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif; /* Общий шрифт для страницы */
+      background-color: #805a0061; /* Светлый фон для контраста */
+      color: #333; /* Цвет текста */
+      text-align: center; /* Центровка всего текста */
+      display: block;
+      min-height: 100vh; /* Растягиваем тело страницы на всю высоту */
+    }
+
+    h4 {
+      text-align: center; /* Центровка заголовка */
+      font-size: 28px; /* Размер шрифта */
+      color: #201f1f; /* Цвет заголовка */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тень для заголовка */
+      margin-top: 20px; /* Отступ сверху */
+      margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    /* Контейнер для кнопок в виде flex */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap; /* Позволяет кнопкам переходить на новую строку */
+      justify-content: center; /* Центрирование кнопок */
+      gap: 20px; /* Отступы между кнопками */
+      max-width: 1000px; /* Ограничение ширины */
+      margin: 0 auto; /* Центровка контейнера */
+      margin-top: 50px; /* Отступ сверху для кнопок */
+    }
+    
+    /* Стили для кнопок */
+    .ellipse-button {
+      display: inline-block;
+      width: 220px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      color: white;
+      background-color: #7787a8; /* Цвет кнопок */
+      border-radius: 35px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.3s ease; /* Плавный переход для эффекта наведения */
+    }
+
+    /* Эффект наведения */
+    .ellipse-button:hover {
+      transform: scale(1.1); /* Увеличение кнопки при наведении */
+    }
+  </style>
+</head>
+<body>
+  <h4>Handelsketten in Deutschland</h4>
+
+  <!-- Контейнер для кнопок -->
+  <div class="button-container">
+    <a href="https://www.aldi.de" class="icon ellipse-button" target="_blank">Aldi</a>
+    <a href="https://www.lidl.de" class="icon ellipse-button" target="_blank">Lidl</a>
+    <a href="https://www.rewe.de" class="icon ellipse-button" target="_blank">REWE</a>
+    <a href="https://www.edeka.de/marktsuche.jsp" class="icon ellipse-button" target="_blank">Edeka</a>
+    <a href="https://www.kaufland.de" class="icon ellipse-button" target="_blank">Kaufland</a>
+    <a href="https://www.penny.de" class="icon ellipse-button" target="_blank">Penny</a>
+    <a href="https://www.dm.de" class="icon ellipse-button" target="_blank">DM Drogerie</a>
+    <a href="https://www.rossmann.de" class="icon ellipse-button" target="_blank">Rossmann</a>
+    <a href="https://www.norma-online.de" class="icon ellipse-button" target="_blank">Norma</a>
+    <a href="https://www.globus.de" class="icon ellipse-button" target="_blank">Globus</a>
+    <a href="https://www.real.de" class="icon ellipse-button" target="_blank">Real</a>
+    <a href="https://www.metros.de" class="icon ellipse-button" target="_blank">Metro</a>
+    <a href="https://www.budni.de" class="icon ellipse-button" target="_blank">Budni</a>
+    <a href="https://www.toom.de" class="icon ellipse-button" target="_blank">Toom</a>
+    <a href="https://www.saturn.de" class="icon ellipse-button" target="_blank">Saturn</a>
+    <a href="https://www.mediamarkt.de" class="icon ellipse-button" target="_blank">MediaMarkt</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feuerwehren in den Bundesländern</title>
+  <style>
+    /* Обнуляем отступы и добавляем базовые стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif; /* Задаем общий шрифт для страницы */
+      background-color: #805a0061; /* Светлый фон для контраста */
+      color: #e30b0b; /* Цвет текста */
+      text-align: center; /* Центровка всего текста */
+      display: block;
+      min-height: 100vh; /* Растягиваем тело страницы на всю высоту */
+    }
+
+    h4 {
+      font-size: 28px; /* Размер шрифта */
+      color: #111010; /* Цвет заголовка */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тень для заголовка */
+      margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    /* Контейнер для кнопок в виде flex */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap; /* Позволяет кнопкам переходить на новую строку */
+      justify-content: center; /* Центрирование кнопок */
+      gap: 20px; /* Отступы между кнопками */
+      max-width: 1000px; /* Ограничение ширины */
+      margin: 0 auto; /* Центровка контейнера */
+      margin-top: 50px; /* Отступ сверху для кнопок */
+    }
+
+    .ellipse-button {
+      display: inline-block;
+      width: 220px; /* Ширина кнопок */
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      color: white;
+      background-color: #7787a8; /* Цвет кнопок */
+      border-radius: 35px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.3s ease; /* Плавный переход для эффекта наведения */
+    }
+
+    /* Эффект наведения */
+    .ellipse-button:hover {
+      transform: scale(1.1); /* Увеличение кнопки при наведении */
+    }
+  </style>
+</head>
+<body>
+  <h4>Feuerwehren in den Bundesländern</h4>
+  
+  <div class="button-container">
+    <a href="https://www.feuerwehr-bayern.de" class="icon ellipse-button" target="_blank">Bayern</a>
+    <a href="https://www.feuerwehr-berlin.de" class="icon ellipse-button" target="_blank">Berlin</a>
+    <a href="https://www.feuerwehr-brandenburg.de" class="icon ellipse-button" target="_blank">Brandenburg</a>
+    <a href="https://www.feuerwehr-bremen.de" class="icon ellipse-button" target="_blank">Bremen</a>
+    <a href="https://www.feuerwehr-hamburg.de" class="icon ellipse-button" target="_blank">Hamburg</a>
+    <a href="https://www.feuerwehr-hessen.de" class="icon ellipse-button" target="_blank">Hessen</a>
+    <a href="https://www.feuerwehr-mv.de" class="icon ellipse-button" target="_blank">Meckl.-Vorpommern</a>
+    <a href="https://www.feuerwehr-niedersachsen.de" class="icon ellipse-button" target="_blank">Niedersachsen</a>
+    <a href="https://www.feuerwehr-nrw.de" class="icon ellipse-button" target="_blank">Nordrhein-Westfalen</a>
+    <a href="https://www.feuerwehr-rlp.de" class="icon ellipse-button" target="_blank">Rheinland-Pfalz</a>
+    <a href="https://www.feuerwehr-saarland.de" class="icon ellipse-button" target="_blank">Saarland</a>
+    <a href="https://www.feuerwehr-sachsen.de" class="icon ellipse-button" target="_blank">Sachsen</a>
+    <a href="https://www.feuerwehr-sachsen-anhalt.de" class="icon ellipse-button" target="_blank">Sachsen-Anhalt</a>
+    <a href="https://www.feuerwehr-schleswig-holstein.de" class="icon ellipse-button" target="_blank">Schleswig-Holstein</a>
+    <a href="https://www.feuerwehr-thueringen.de" class="icon ellipse-button" target="_blank">Thüringen</a>
+    <a href="https://www.feuerwehrbaden-wuerttemberg.de" class="icon ellipse-button" target="_blank">Baden-Württemberg</a>
+  </div>
+</body>
+</html>

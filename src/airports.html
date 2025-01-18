@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Аэропорты Германии</title>
+    <style>
+        .airport-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px; /* Максимальная ширина карточки */
+            margin: 0 auto; /* Центрирование карточек */
+        }
+
+        .airport-image {
+            width: 100%;
+            height: 300px; /* Увеличение высоты изображения */
+            object-fit: cover; /* Картинка масштабируется без искажений */
+        }
+
+        .airport-info {
+            padding: 15px;
+            background-color: #f4f4f4;
+        }
+
+        .airport-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .airport-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .airport-info a {
+            color: #0047D3;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .airport-info a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* Адаптивные стили для уменьшения размеров на маленьких экранах */
+        @media (max-width: 768px) {
+            .airport-image {
+                height: 200px; /* Уменьшение высоты изображений на маленьких экранах */
+            }
+
+            .airport-info h2 {
+                font-size: 20px;
+            }
+
+            .airport-info p,
+            .airport-info a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="index.html">Назад к городам</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Аэропорты Германии</h1>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Berlin.jpg" alt="Berlin Brandenburg Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Berlin Brandenburg Airport (BER)</h2>
+                <p>Аэропорт Берли́н — Бра́нденбург имени Вилли Брандта (нем. Flughafen Berlin Brandenburg «Willy Brandt»; BER) — аэропорт в Бранденбурге, расположен у границы с Берлином. Носит имя бывшего мэра Западного Берлина и канцлера Западной Германии Вилли Брандта.</p>
+                <a href="https://ber.berlin-airport.de/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Frankfurt.jpg" alt="Frankfurt Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Frankfurt Airport (FRA)</h2>
+                <p>Аэропорт Фра́нкфурт-на-Ма́йне (нем. Flughafen Frankfurt am Main, ИАТА: FRA, ИКАО: EDDF), также известный как Рейн-Майнский Аэропорт (нем. Rhein-Main-Flughafen) — крупнейший аэропорт Германии.</p>
+                <a href="https://www.frankfurt-airport.com/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_München.jpg" alt="Munich Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Munich Airport (MUC)</h2>
+                <p>Международный аэропо́рт Мю́нхен имени Франца-Йозефа Штрауса (нем. Flughafen München «Franz Josef Strauß») — международный аэропорт, расположенный в Верхней Баварии в округах Фрайзинг и Эрдинг в местности Эрдингер Моос[нем.]. Аэропорт назван именем бывшего премьер-министра Баварии Франца-Йозефа Штрауса.</p>
+                <a href="https://www.munich-airport.com/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Hamburg.jpg" alt="Hamburg Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Hamburg Airport (HAM)</h2>
+                <p>Га́мбург (нем. Flughafen Hamburg-Fuhlsbüttel) (ИАТА: HAM, ИКАО: EDDH) — 
+                    международный аэропорт Гамбурга, Германия. Расположен на расстоянии 8,5 
+                    километров от центра города.</p>
+                <a href="https://www.hamburg-airport.de/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Düsseldorf.jpg" alt="Düsseldorf Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Düsseldorf Airport (DUS)</h2>
+                <p>Аэропорт Дюссельдорф (нем. Flughafen Düsseldorf, официальное название — Düsseldorf Airport; ИАТА: DUS, ИКАО: EDDL) — гражданский международный аэропорт, расположенный в 7 км от центра Дюссельдорфа, столицы федеральной земли Северный Рейн-Вестфалия (Германия).</p>
+                <a href="https://www.dus.com/en" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/cologne-bonn-airport.jpg" alt="Cologne Bonn Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Cologne Bonn Airport (CGN)</h2>
+                <p>Аэропорт Кёльн/Бонн (нем. Flughafen Köln/Bonn, (ИАТА: CGN, ИКАО: EDDK)), 
+                    также известный как Аэропорт имени Конрада Аденауэра — международный 
+                    гражданский аэропорт, расположенный в пригородном районе Кёльна Порц (Германия) 
+                    в зоне природного заповедника Ванер-Хайде. 
+                    Порт находится на территории Региона Кёльн/Бонн, 
+                    в 15 километрах к юго-востоку от центральной части Кёльна и в 16 километрах 
+                    к северо-востоку от Бонна.</p>
+                <a href="https://www.cologne-bonn-airport.com/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Stuttgart.jpg" alt="Stuttgart Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Stuttgart Airport (STR)</h2>
+                <p>Аэропорт Штутгарт (нем. Flughafen Stuttgart 
+                    (ранее нем. Flughafen Stuttgart-Echterdingen)) (ИАТА: STR, ИКАО: EDDS) — 
+                    международный аэропорт, расположенный приблизительно в 12 км к югу от города 
+                    Штутгарта, Германия.</p>
+                <a href="https://www.stuttgart-airport.com/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Hannover.jpg" alt="Hannover Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Hannover Airport (HAJ)</h2>
+                <p>Аэропорт Ганновер (нем. Flughafen Hannover, маркетинговое название 
+                    Hannover Airport, ранее аэропорт Ганновер-Лангенхаген), — 
+                    международный аэропорт в городе Лангенхаген (Регион Ганновер).</p>
+                <a href="https://www.hannover-airport.de/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Nürnberg-Airport.jpg" alt="Nuremberg Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Nürnberg Airport (NUE)</h2>
+                <p>Аэропорт Нюрнберга имени Альбрехта Дюрера — современный международный аэропорт 
+                    среднеевропейского уровня, находящийся в городе Нюрнберг. </p>
+                <a href="https://www.airport-nuernberg.de/en" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+
+        <div class="airport-card">
+            <img src="images/Flughafen_Bremen.jpg" alt="Bremen Airport" class="airport-image">
+            <div class="airport-info">
+                <h2>Bremen Airport (BRE)</h2>
+                <p>Аэропорт Бремен (нем. Flughafen Bremen, также City Airport Bremen, IATA: 
+                    BRE, ICAO: EDDW) — международный аэропорт в Бремене, 
+                    в одноимённой федеральной земле Германии.</p>
+                <a href="https://www.bremen-airport.com/" target="_blank">Offizielle Website</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
