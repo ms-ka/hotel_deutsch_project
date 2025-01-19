@@ -1,15 +1,13 @@
 
-        body {
-        background-color: #CEC09E;
-        }
-
+     
         h1 {
+            margin-top: 20px;
             text-align: center;
         }
 
         .airport-card {
             margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
             /* border-radius: 8px; */
             overflow: hidden;
         }
@@ -21,7 +19,7 @@
 
         .airport-info {
             padding: 15px;
-            background-color: #CEC09E;
+            /* background-color: #CEC09E; */
             text-align: center;
         }
 
@@ -35,17 +33,17 @@
             margin-bottom: 10px;
         } */
 
-        .airport-info a {
+        /* .airport-info a {
             text-decoration: none;
-        }
+        } */
 
         .btn-airport {
-            padding: 5px;
+            padding: 3px;
             background-color: #545454;
             border: none;
             color: white;
             text-align: center;
-            font-size: 16px;
+            font-size: 18px;
             border-radius: 7px; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
             transition: all 0.3s ease; 
@@ -56,3 +54,6 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
             transform: translateY(-4px); 
         }
+
+        body {
+            background-color: #CEC09E !important;            }
