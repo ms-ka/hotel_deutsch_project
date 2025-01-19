@@ -75,6 +75,8 @@ main {
 
 .grid-gallery__card {
   position: relative;
+  text-align: center;
+
 }
 
 .icon-right-bottom {
@@ -450,9 +452,39 @@ color: #fff;
   background-color: #666;
   padding: 0.2em;
   margin-top: 0.3em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 0.3em;
 }
 a.larisbtn:hover{ 
   background-color: #922323;
-
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); 
 }
+
+.city {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.city:hover::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 100%;
+  width: 300px; /* Ustaw szerokość okienka */
+  height: 160px; /* Ustaw wysokość okienka */
+  transform: translateX(-60%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  white-space: normal; /* Zapewnia zawijanie tekstu */
+  height: auto; /* Wysokość dopasowuje się do zawartości */
+  line-height: 1.6; /* Zapewnia odpowiednią wysokość linii */
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden; /* Ukrywa nadmiar tekstu, jeśli jest za duży */
+}
+
+
