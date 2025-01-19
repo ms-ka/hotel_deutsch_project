@@ -1,0 +1,58 @@
+
+        body {
+        background-color: #CEC09E;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .airport-card {
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            /* border-radius: 8px; */
+            overflow: hidden;
+        }
+
+        .airport-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .airport-info {
+            padding: 15px;
+            background-color: #CEC09E;
+            text-align: center;
+        }
+
+        .airport-info h2 {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+/* 
+        .airport-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        } */
+
+        .airport-info a {
+            text-decoration: none;
+        }
+
+        .btn-airport {
+            padding: 5px;
+            background-color: #545454;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 7px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: all 0.3s ease; 
+        }
+
+        .btn-airport:hover {
+            background-color: #922323;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px); 
+        }
