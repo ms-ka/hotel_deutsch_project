@@ -315,6 +315,7 @@ td a:hover {
 .stars {
   color: gold !important;
   font-size: 20px !important;
+  text-shadow: 1px 1px 2px black;
 }
 
 .date-info {
@@ -501,5 +502,3 @@ a.larisbtn:hover{
   box-sizing: border-box;
   overflow: hidden; /* Ukrywa nadmiar tekstu, jeśli jest za duży */
 }
-
-
