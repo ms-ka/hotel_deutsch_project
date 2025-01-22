@@ -63,6 +63,16 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+.nav-to-main {
+  display: inline-block; /* Zapewnia, że linki pozostaną w jednej linii */
+}
+
+.nav-to-main a {
+  text-decoration: underline; 
+  color: #1E90FF;
+  font-size: 18px;
+  margin-left: 10px;
+}
 
 .logos {
   display: flex;
@@ -472,17 +482,21 @@ a.larisbtn:hover{
 .city:hover::after {
   content: attr(data-info);
   position: absolute;
-  bottom: 100%;
-  width: 300px; /* Ustaw szerokość okienka */
-  height: 160px; /* Ustaw wysokość okienka */
-  transform: translateX(-60%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 3px;
+  bottom: 130%; 
+
+  width: 210px; /* Ustaw szerokość okienka */
+  font-style: italic;     /* Pochylony tekst */
+  font-weight: 300;       /* Cienka czcionka */
+  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
+  transform: translateX(-66%);
+  font-size: 12;
+
+  background-color: rgba(173, 179, 233, 0.6);
+  color: rgb(3, 0, 0);
+  padding: 3px 2px;
   border-radius: 5px;
   white-space: normal; /* Zapewnia zawijanie tekstu */
   height: auto; /* Wysokość dopasowuje się do zawartości */
-  line-height: 1.6; /* Zapewnia odpowiednią wysokość linii */
   z-index: 1;
   box-sizing: border-box;
   overflow: hidden; /* Ukrywa nadmiar tekstu, jeśli jest za duży */
