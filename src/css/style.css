@@ -1,68 +1,76 @@
+/* ОБЩИЕ СТИЛИ */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Устанавливаем стандартное поведение для всех элементов (включает padding и border в ширину/высоту элемента) */
 }
 
 html {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif; /* Устанавливаем шрифт для всего сайта */
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #805a0061;
+  margin: 0; /* Убираем отступы по умолчанию */
+  display: flex; /* Используем Flexbox для всего тела страницы */
+  flex-direction: column; /* Элементы внутри body будут располагаться в колонку */
+  min-height: 100vh; /* Страница должна занимать всю высоту экрана */
+  background-color: #805a0061; /* Цвет фона */
+}
+
+/* СТИЛИ ДЛЯ ССЫЛОК */
+a {
+  color: black; /* Цвет текста ссылки */
+  text-decoration: none; /* Убираем подчеркивание у ссылки */
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* ХЕДЕР (ШАПКА) */
+header {
+  display: flex; /* Используем Flexbox для хедера */
+  position: sticky; /* Хедер будет оставаться фиксированным при прокрутке */
+  top: 0px; /* Отступ от верхнего края */
+  z-index: 2; /* Поверх других элементов */
+  justify-content: space-between; /* Равномерно распределяем элементы */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  height: 70px; /* Высота хедера */
+  padding: 5px 24px; /* Отступы внутри хедера */
+  background-color: rgb(255, 255, 255); /* Цвет фона хедера */
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); /* Тень для хедера */
 }
 
 .logos>p {
-  margin-top: 4px;
-  font-weight: bold;
+  margin-top: 4px; /* Отступ сверху */
+  font-weight: bold; /* Жирный шрифт */
 }
 
-h1 {
-  position: relative;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 120%;
-  color: #fff;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-header {
-  display: flex;
-  position: sticky;
-  top: 0px;
-  z-index: 2;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  padding: 5px 24px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-}
-
+/* НАВИГАЦИЯ */
 nav {
-  display: flex;
-  align-items: center;
-  gap: 36px;
+  display: flex; /* Используем Flexbox для навигации */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  gap: 36px; /* Отступы между элементами */
 }
 
 .nav-icons {
-  display: flex;
-  font-size: 11px;
-  gap: 16px;
+  display: flex; /* Используем Flexbox для иконок */
+  font-size: 11px; /* Размер шрифта */
+  gap: 16px; /* Отступы между иконками */
 }
 
 .nav-icons__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Используем Flexbox для обертки иконок */
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  align-items: center; /* Выравниваем иконки по центру */
 }
+
+====
+   /* text: na glavnuyu */
+.text-center {
+    font-size: 16px;
+    padding: 2px;
+}
+====
+
 .nav-to-main {
   display: inline-block; /* Zapewnia, że linki pozostaną w jednej linii */
 }
@@ -74,39 +82,37 @@ nav {
   margin-left: 10px;
 }
 
+/* ЛОГОТИПЫ */
 .logos {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Используем Flexbox для логотипов */
+  flex-direction: column; /* Логотипы будут располагаться вертикально */
 }
 
+/* ОСНОВНОЕ СОДЕРЖИМОЕ */
 main {
-  flex: 1;
+  flex: 1; /* Основной контент занимает все доступное пространство */
+}
+
+/* ГАЛЕРЕЯ */
+.grid-gallery {
+  display: flex; /* Используем Flexbox */
+  flex-wrap: wrap; /* Элементы будут оборачиваться в новые строки */
+  gap: 20px; /* Отступы между элементами */
+  min-height: 350px;
+  margin-bottom: 85px; /* Отступ снизу */
 }
 
 .grid-gallery__card {
-  position: relative;
-  text-align: center;
-
-}
-
-.icon-right-bottom {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  font-size: 20px;
+  position: relative; /* Позиционирование для дочерних элементов */
+  text-align: center; /* Выравнивание текста по центру */
+  /* display: flex; */
+  /* width: 100%; Gwarantuje, że karty będą miały pełną szerokość kontenera */
 }
 
 .grid-gallery__card h4 {
-  margin-bottom: 7px;
-  font-weight: bold;
-}
-
-.grid-gallery__card>img {
-  width: 100%;
-  object-fit: cover;
-  /* Картинка будет заполнять карточку без искажения */
-  height: 200px;
-  /* Фиксированная высота для изображений */
+  margin-bottom: 7px; /* Отступ снизу */
+  font-weight: bold; /* Жирное начертание */
+  /* margin-top: 10px; */
 }
 
 .grid-gallery__card>span {
@@ -114,57 +120,68 @@ main {
   font-size: 11px;
 }
 
-.grid-gallery__card>h4 {
-  margin-top: 10px;
+.grid-gallery__card>img {
+  width: 100%; /* Ширина изображения по ширине контейнера */
+  object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции */
+  height: 200px; /* Фиксированная высота */
 }
 
+/* Стиль для иконки */
+.grid-gallery__icon {
+  position: absolute; /* Абсолютное позиционирование для иконки */
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.icon-right-bottom {
+  position: absolute; /* Абсолютное позиционирование для иконки */
+  right: 10px; /* Отступ от правого края */
+  bottom: 10px; /* Отступ от нижнего края */
+  font-size: 20px; /* Размер шрифта */
+}
+
+/* ОСНОВНАЯ КАРТИНКА НА ГЛАВНОЙ СТРАНИЦЕ */
 .main-poster0 {
-  display: flex;
-  align-items: end;
-  /* Не меняем, отвечает за выравнивание контента */
-  padding: 54px 100px;
-  width: 100%;
-  /* Занимает всю ширину родительского блока */
-  max-width: 1250px;
-  /* Не превышает 1400px */
-  height: 683px;
-  /* Увеличиваем высоту, например, до 700px */
-  margin-top: 0px;
-  /* Если необходимо сдвинуть блок вниз на ...px */
-  position: relative;
-  background: #454545;
-  background-image: url('/images/0.png') !important;
-  background-position: center;
-  background-size: cover;
+  display: flex; /* Используем Flexbox для позиционирования */
+  align-items: end; /* Выравниваем элементы по нижнему краю */
+  padding: 54px 100px; /* Отступы внутри блока */
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  max-width: 1250px; /* Ограничиваем максимальную ширину */
+  height: 683px; /* Высота */
+  margin-top: 0px; /* Отступ сверху */
+  position: relative; /* Позиционирование для дочерних элементов */
+  background: #454545; /* Цвет фона */
+  background-image: url('/images/0.png') !important; /* Фоновое изображение */
+  background-position: center; /* Центрируем фоновое изображение */
+  background-size: cover; /* Фоновое изображение будет покрывать весь контейнер */
+
 }
 
-*/ .overlay {
-  position: absolute;
+.overlay {
+  position: absolute; /* Абсолютное позиционирование */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный черный фон */
 }
 
-
+/* ФУТЕР */
 footer {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Учитываем padding и border в ширине */
   width: 100%;
-  padding: 17px 24px;
-  height: 385px;
-  background-color: #545454;
+  padding: 17px 24px; /* Отступы внутри футера */
+  height: 385px; /* Высота футера */
+  background-color: #545454; /* Цвет фона футера */
 }
 
 footer a {
-  color: white;
-  /* Устанавливаем белый цвет текста для таких HTML-ссылок */
-  text-decoration: none;
-  /* Убираем подчеркивание, если нужно */
-  margin: 5px 0;
-  /* Устанавливаем одинаковый отступ для всех ссылок */
-  display: inline-block;
-  /* Выравнивание для одинаковых отступов */
+  color: white; /* Цвет текста для ссылок в футере */
+  text-decoration: none; /* Убираем подчеркивание */
+  margin: 5px 0; /* Отступы */
+  display: inline-block; /* Ссылки будут выравниваться по горизонтали */
 }
 
 footer a:hover {
@@ -172,21 +189,187 @@ footer a:hover {
   /* Подчеркивание при наведении */
 }
 
-.grid-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 1fr;
-  /* Все карточки будут равной высоты */
-  gap: 20px;
-  min-height: 350px;
-  margin-bottom: 85px;
+/* БЛОК ДЛЯ СТИЛЕЙ ДЛЯ КНОПОК */
+.ellipse-button {
+  display: inline-block; /* Отображение как блочный элемент */
+  padding: 10px 20px;
+  border-radius: 50px; /* Закругленные углы */
+  background-color: #90aebd; /* Цвет фона */
+  color: white; /* Цвет текста */
+  text-align: center; /* Центрируем текст */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
 }
 
-.grid-gallery a {
-  color: #fefcfc;
+.ellipse-button:hover {
+  background-color: #90aebd; /* Цвет кнопки при наведении */
+}
+
+.search-box input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-box.visible {
+  display: block;
+  /* Отображаем, когда добавлен класс "visible" */
+}
+
+* Стиль для таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+td a {
+  color: #922323;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* ЗВЕЗДЫ */
+.stars {
+  color: gold !important;
+  font-size: 20px !important;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ИНФОРМАЦИЯ О ДАТЕ */
+.date-info {
+  text-align: center;/* Центрируем текст */
+  margin-top: 20px;/* Отступ сверху */
+  font-size: 18px;/* Размер шрифта */
+  color: #555;/* Цвет текста */
+  font-family: Arial, sans-serif;/* Шрифт */
+}
+
+.date-info span {
+  padding: 10px 20px;/* Полупрозрачный фон */
+  border-radius: 10px; /* Закругленные углы */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта глубины */
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  /* Увеличение при наведении */
+}
+
+/* АККОРДЕОН */
+.accordion-button {
+  background-color: #444; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  font-weight: bold;
+  border: none; /* Убрать рамку */
+}
+
+.accordion-button:focus {
+  box-shadow: none; /* Убрать обводку при фокусе */
+}
+
+.accordion-body {
+  background-color: #545454; /* Цвет фона содержимого */
+  color: white; /* Цвет текста содержимого */
+  padding: 20px; /* Внутренние отступы */
+}
+
+.accordion-item {
+  border: 1px solid #666; /* Рамка вокруг элемента */
+  border-radius: 5px;  /* Закругленные углы */
+}
+
+.accordion-collapse {
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-button::after {
+  font-family: "Font Awesome 5 Free"; /* Используем иконки Font Awesome */
+  content: "\f078"; /* Код для стрелки вниз */
+  font-weight: 900;
+  color: #fff; /* Цвет стрелки */
+}
+
+.accordion-button.collapsed::after {
+  content: "\f077"; /* Код для стрелки вверх */
+}
+
+.accordion-button,
+.accordion-body {
+  font-family: "Arial", sans-serif;
+  /* Основной шрифт сайта */
+}
+
+a.larisbtn {
+color: #fff;
+  background-color: #666;
+  padding: 0.2em;
+  margin-top: 0.3em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 0.3em;
+}
+a.larisbtn:hover{ 
+  background-color: #922323;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); 
+}
+
+/* ссылка jpg */
+.city {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* текст после наведения мыши на название города */
+.city:hover::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 130%; 
+
+  width: 210px; /* Ustaw szerokość okienka */
+  font-style: italic;     /* Pochylony tekst */
+  font-weight: 300;       /* Cienka czcionka */
+  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
+  transform: translateX(-66%);
+  font-size: 12;
+
+  background-color: rgba(173, 179, 233, 0.6);
+  color: rgb(3, 0, 0);
+  padding: 3px 2px;
+  border-radius: 5px;
+  white-space: normal; /* Zapewnia zawijanie tekstu */
+  height: auto; /* Wysokość dopasowuje się do zawartości */
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden; /* Ukrywa nadmiar tekstu, jeśli jest za duży */
 }
 
 .main-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 90px 110px;
 }
 
@@ -252,11 +435,11 @@ h4 {
 }
 
 .footer-navigation {
-  padding: 0px 90px;
-  width: 100%;
-  justify-content: space-between;
-  color: #fff;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 90px;
+  color: #fff;
   margin-bottom: 53px;
 }
 
@@ -273,232 +456,4 @@ h4 {
   nav>a {
     display: none;
   }
-}
-
-/* Стиль для иконки */
-.grid-gallery__icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #333;
-}
-
-/* Стиль для таблицы */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
-td a {
-  color: #922323;
-  text-decoration: none;
-}
-
-td a:hover {
-  text-decoration: underline;
-}
-
-.stars {
-  color: gold !important;
-  font-size: 20px !important;
-  text-shadow: 1px 1px 2px black;
-}
-
-.date-info {
-  text-align: center;
-  /* Центрируем текст */
-  margin-top: 20px;
-  /* Отступ сверху */
-  font-size: 18px;
-  /* Размер шрифта */
-  color: #555;
-  /* Цвет текста */
-  font-family: Arial, sans-serif;
-  /* Шрифт */
-}
-
-.date-info span {
-  padding: 10px 20px;
-
-
-  /* Полупрозрачный фон */
-  border-radius: 10px;
-  /* Закругленные углы */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  /* Тень для эффекта глубины */
-}
-
-.icon {
-  transition: transform 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-  /* Увеличение при наведении */
-}
-
-/* Стили для кнопок */
-.ellipse-button {
-  display: inline-block;
-  /* Чтобы кнопки работали как блочные элементы */
-  padding: 10px 20px;
-  /* Внутренние отступы */
-  border-radius: 50px;
-  /* Закругленные края */
-  background-color: #90aebd;
-  /* Цвет фона */
-  color: white;
-  /* Цвет текста */
-  text-align: center;
-  /* Центрирование текста */
-  text-decoration: none;
-  /* Убираем подчеркивание */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  /* Плавный переход */
-}
-
-.ellipse-button:hover {
-  background-color: #90aebd;
-  /* Цвет кнопки при наведении */
-}
-
-.search-box input {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 200px;
-}
-
-.search-box.visible {
-  display: block;
-  /* Отображаем, когда добавлен класс "visible" */
-}
-
-/* Стили для аккордеона */
-.accordion-button {
-  background-color: #444;
-  ;
-  /* Цвет фона кнопки */
-  color: #fff;
-  /* Цвет текста */
-  font-weight: bold;
-  border: none;
-  /* Убрать рамку */
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-  /* Убрать обводку при фокусе */
-}
-
-.accordion-body {
-  background-color: #545454;
-  /* Цвет фона содержимого */
-  color: white;
-  /* Цвет текста содержимого */
-}
-
-.accordion-item {
-  border: 1px solid #666;
-  /* Рамка вокруг элемента */
-  border-radius: 5px;
-  /* Закругленные углы */
-}
-
-.accordion-collapse {
-  transition: height 0.3s ease, padding 0.3s ease;
-}
-
-.accordion-body {
-  padding: 20px;
-  /* Увеличить внутренние отступы */
-}
-
-.accordion-body {
-  padding: 20px;
-  /* Увеличенные отступы */
-}
-
-.accordion-collapse {
-  transition: height 0.3s ease, padding 0.3s ease;
-}
-
-.accordion-button::after {
-  font-family: "Font Awesome 5 Free";
-  /* Используем иконки Font Awesome */
-  content: "\f078";
-  /* Код для стрелки вниз */
-  font-weight: 900;
-  color: #fff;
-  /* Цвет стрелки */
-}
-
-.accordion-button.collapsed::after {
-  content: "\f077";
-  /* Код для стрелки вверх */
-}
-
-.accordion-button,
-.accordion-body {
-  font-family: "Arial", sans-serif;
-  /* Основной шрифт сайта */
-}
-
-a.larisbtn {
-color: #fff;
-  background-color: #666;
-  padding: 0.2em;
-  margin-top: 0.3em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  border-radius: 0.3em;
-}
-a.larisbtn:hover{ 
-  background-color: #922323;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px); 
-}
-
-.city {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-}
-
-.city:hover::after {
-  content: attr(data-info);
-  position: absolute;
-  bottom: 130%; 
-
-  width: 210px; /* Ustaw szerokość okienka */
-  font-style: italic;     /* Pochylony tekst */
-  font-weight: 300;       /* Cienka czcionka */
-  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
-  transform: translateX(-66%);
-  font-size: 12;
-
-  background-color: rgba(173, 179, 233, 0.6);
-  color: rgb(3, 0, 0);
-  padding: 3px 2px;
-  border-radius: 5px;
-  white-space: normal; /* Zapewnia zawijanie tekstu */
-  height: auto; /* Wysokość dopasowuje się do zawartości */
-  z-index: 1;
-  box-sizing: border-box;
-  overflow: hidden; /* Ukrywa nadmiar tekstu, jeśli jest za duży */
 }
