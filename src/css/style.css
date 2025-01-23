@@ -62,25 +62,22 @@ nav {
   flex-direction: column; /* Располагаем элементы по вертикали */
   align-items: center; /* Выравниваем иконки по центру */
 }
-
-====
-   /* text: na glavnuyu */
-.text-center {
-    font-size: 16px;
-    padding: 2px;
-}
-====
-
+/* ссылка на главную страницу */
 .nav-to-main {
   display: inline-block; /* Zapewnia, że linki pozostaną w jednej linii */
 }
 
 .nav-to-main a {
   text-decoration: underline; 
-  color: #1E90FF;
   font-size: 18px;
   margin-left: 10px;
+  color: #922323;
 }
+   /* text: na glavnuyu */
+/* .text-center {
+    font-size: 16px;
+    padding: 2px;
+} */
 
 /* ЛОГОТИПЫ */
 .logos {
@@ -156,7 +153,6 @@ main {
   background-image: url('/images/0.png') !important; /* Фоновое изображение */
   background-position: center; /* Центрируем фоновое изображение */
   background-size: cover; /* Фоновое изображение будет покрывать весь контейнер */
-
 }
 
 .overlay {

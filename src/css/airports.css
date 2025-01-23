@@ -18,6 +18,7 @@
           .nav-to-main a {
             font-size: 18px;
             margin-left: 20px;
+            color: #922323;
           }
 
           /* chasy */
@@ -36,14 +37,9 @@
           }
           
           .date-info span {
-            padding: 10px 20px;
-          
-          
-            /* Полупрозрачный фон */
-            border-radius: 10px;
-            /* Закругленные углы */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            /* Тень для эффекта глубины */
+            padding: 10px 20px;/* Полупрозрачный фон */
+            border-radius: 10px;/* Закругленные углы */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);/* Тень для эффекта глубины */
           }
 
         /* airports carts */
