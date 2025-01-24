@@ -46,19 +46,16 @@ header {
 
 /* НАВИГАЦИЯ */
 nav {
-  display: flex; /* Используем Flexbox для навигации */
   align-items: center; /* Выравниваем элементы по вертикали */
   gap: 36px; /* Отступы между элементами */
 }
 
 .nav-icons {
-  display: flex; /* Используем Flexbox для иконок */
   font-size: 11px; /* Размер шрифта */
   gap: 16px; /* Отступы между иконками */
 }
 
 .nav-icons__wrapper {
-  display: flex; /* Используем Flexbox для обертки иконок */
   flex-direction: column; /* Располагаем элементы по вертикали */
   align-items: center; /* Выравниваем иконки по центру */
 }
@@ -74,14 +71,13 @@ nav {
   color: #922323;
 }
    /* text: na glavnuyu */
-/* .text-center {
-    font-size: 16px;
-    padding: 2px;
-} */
+   .text-center {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
 
 /* ЛОГОТИПЫ */
 .logos {
-  display: flex; /* Используем Flexbox для логотипов */
   flex-direction: column; /* Логотипы будут располагаться вертикально */
 }
 
@@ -91,36 +87,25 @@ main {
 }
 
 /* ГАЛЕРЕЯ */
+/* ves konterer dlya kartinok */
 .grid-gallery {
   display: flex; /* Используем Flexbox */
   flex-wrap: wrap; /* Элементы будут оборачиваться в новые строки */
-  gap: 20px; /* Отступы между элементами */
-  min-height: 350px;
-  margin-bottom: 85px; /* Отступ снизу */
 }
 
+/* kartinka goroda */
 .grid-gallery__card {
-  position: relative; /* Позиционирование для дочерних элементов */
+  margin-bottom: 15px;
+  margin-top: 10px;
   text-align: center; /* Выравнивание текста по центру */
-  /* display: flex; */
-  /* width: 100%; Gwarantuje, że karty będą miały pełną szerokość kontenera */
+
 }
 
+/* nazvanie goroda */
 .grid-gallery__card h4 {
   margin-bottom: 7px; /* Отступ снизу */
+  margin-top: 7px;
   font-weight: bold; /* Жирное начертание */
-  /* margin-top: 10px; */
-}
-
-.grid-gallery__card>span {
-  color: #454545;
-  font-size: 11px;
-}
-
-.grid-gallery__card>img {
-  width: 100%; /* Ширина изображения по ширине контейнера */
-  object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции */
-  height: 200px; /* Фиксированная высота */
 }
 
 /* Стиль для иконки */
@@ -132,12 +117,6 @@ main {
   color: #333;
 }
 
-.icon-right-bottom {
-  position: absolute; /* Абсолютное позиционирование для иконки */
-  right: 10px; /* Отступ от правого края */
-  bottom: 10px; /* Отступ от нижнего края */
-  font-size: 20px; /* Размер шрифта */
-}
 
 /* ОСНОВНАЯ КАРТИНКА НА ГЛАВНОЙ СТРАНИЦЕ */
 .main-poster0 {
@@ -243,11 +222,11 @@ td a:hover {
 }
 
 /* ЗВЕЗДЫ */
-.stars {
+/* .stars {
   color: gold !important;
   font-size: 20px !important;
   text-shadow: 1px 1px 2px black;
-}
+} */
 
 /* ИНФОРМАЦИЯ О ДАТЕ */
 .date-info {
@@ -364,7 +343,6 @@ a.larisbtn:hover{
 }
 
 .main-wrapper {
-  display: flex;
   flex-direction: column;
   padding: 90px 110px;
 }
@@ -382,7 +360,6 @@ a.larisbtn:hover{
 }
 
 .main-navigation__section {
-  display: flex;
   flex-direction: column;
   font-size: 16px;
 }
@@ -398,7 +375,6 @@ h4 {
 }
 
 .main-navigation__wrapper {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -413,7 +389,6 @@ h4 {
 
 .bottom-nav-heading {
   align-items: center;
-  display: flex;
   justify-content: end;
   margin-bottom: 26px;
 }
@@ -431,7 +406,6 @@ h4 {
 }
 
 .footer-navigation {
-  display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0px 90px;
