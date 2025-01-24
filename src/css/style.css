@@ -95,16 +95,15 @@ main {
 
 /* kartinka goroda */
 .grid-gallery__card {
-  margin-bottom: 15px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   text-align: center; /* Выравнивание текста по центру */
-
 }
 
 /* nazvanie goroda */
 .grid-gallery__card h4 {
-  margin-bottom: 7px; /* Отступ снизу */
-  margin-top: 7px;
+  margin-bottom: 5px; /* Отступ снизу */
+  margin-top: 5px;
   font-weight: bold; /* Жирное начертание */
 }
 
@@ -193,7 +192,7 @@ footer a:hover {
   /* Отображаем, когда добавлен класс "visible" */
 }
 
-* Стиль для таблицы */
+/* Стиль для таблицы */
 table {
   width: 100%;
   border-collapse: collapse;
