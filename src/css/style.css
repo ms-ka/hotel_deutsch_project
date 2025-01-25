@@ -328,7 +328,7 @@ a.larisbtn:hover{
   font-weight: 300;       /* Cienka czcionka */
   font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
   transform: translateX(-66%);
-  font-size: 12;
+  font-size: 1a;
 
   background-color: rgba(173, 179, 233, 0.6);
   color: rgb(3, 0, 0);
