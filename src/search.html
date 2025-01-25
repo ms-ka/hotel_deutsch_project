@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск по сайту</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #805a0061;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .top-bar .search-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .top-bar h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        flex-grow: 1;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: #805a0061;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .search-bar input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      .search-bar button {
+        padding: 5px 10px;
+        background-color: #90aebd;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .search-bar button:hover {
+        background-color: #269d77;
+      }
+
+      main {
+        margin-top: 80px;
+        padding: 20px;
+      }
+
+      #results .result {
+        margin-bottom: 15px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px;
+        background-color: #805a0061;
+        border-top: 1px solid #805a0061;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <h1>Hotelportal</h1>
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="Введите запрос..." />
+          <button type="button" onclick="performSearch()">Найти</button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <h4>Поиск по сайту</h4>
+      <div id="results"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Hotelportal</p>
+    </footer>
+
+    <script>
+      const data = [
+        {
+          title: "Главная страница",
+          content: "Добро пожаловать на наш сайт!",
+          link: "index.html",
+        },
+        {
+          title: "Услуги",
+          content: [
+            { name: "Банки", link: "banken.html" },
+            { name: "Почта", link: "https://www.deutschepost.de/" },
+            { name: "Таможня", link: "https://www.zoll.de/" },
+            { name: "Каршеринг", link: "carsharing.html" },
+            { name: "Страхование", link: "versicherung.html" },
+            { name: "Торговые сети", link: "handelsketten.html" },
+            { name: "Авиасообщение", link: "airports.html" },
+            { name: "Мобильные операторы", link: "mobilfunkanbieter.html" },
+            {
+              name: "Железнодорожное сообщение",
+              link: "https://www.bahn.com/",
+            },
+          ],
+        },
+        { title: "О сайте", content: "Hotelportal", link: "about.html" },
+        { title: "БЕРЛИН", content: "Берлин", link: "berlin.html" },
+        { title: "БОНН", content: "Бонн", link: "bonn.html" },
+        {
+          title: "БРАНДЕНБУРГ",
+          content: "Бранденбург",
+          link: "brandenburg.html",
+        },
+        { title: "БРЕМЕН", content: "Бремен", link: "bremen.html" },
+        { title: "ДРЕЗДЕН", content: "Дрезден", link: "dresden.html" },
+        {
+          title: "ДЮССЕЛЬДОРФ",
+          content: "Дюссельдорф",
+          link: "düsseldorf.html",
+        },
+        { title: "ЭРФУРТ", content: "Эрфурт", link: "erfurt.html" },
+        { title: "ГАМБУРГ", content: "Гамбург", link: "hamburg.html" },
+        { title: "ГАННОВЕР", content: "Ганновер", link: "hannover.html" },
+        { title: "КИЛЬ", content: "Киль", link: "kiel.html" },
+        { title: "МАГДЕБУРГ", content: "Магдебург", link: "magdeburg.html" },
+        { title: "МАЙНЦ", content: "Майнц", link: "mainz.html" },
+        { title: "МЮНХЕН", content: "Мюнхен", link: "münchen.html" },
+        { title: "ПОТСДАМ", content: "Потсдам", link: "potsdam.html" },
+        {
+          title: "СААРБРЮКЕН",
+          content: "Саарбрюкен",
+          link: "saarbrücken.html",
+        },
+        { title: "ШВЕРИН", content: "Шверин", link: "schwerin.html" },
+        { title: "ШТУТГАРТ", content: "Штутгарт", link: "stuttgart.html" },
+        { title: "ВИСБАДЕН", content: "Висбаден", link: "wiesbaden.html" },
+      ];
+
+      function performSearch() {
+        const query = document
+          .getElementById("search")
+          .value.trim()
+          .toLowerCase();
+        const resultsContainer = document.getElementById("results");
+        resultsContainer.innerHTML = "";
+
+        if (query) {
+          const results = data.filter(
+            (item) => item.title.toLowerCase() === query
+          );
+
+          if (results.length > 0) {
+            results.forEach((result) => {
+              const resultDiv = document.createElement("div");
+              resultDiv.classList.add("result");
+
+              if (result.title === "Услуги") {
+                resultDiv.innerHTML = `<h2>${result.title}</h2>`;
+                const list = document.createElement("ul");
+                result.content.forEach((service) => {
+                  const listItem = document.createElement("li");
+                  listItem.innerHTML = `<a href="${service.link}" target="_blank">${service.name}</a>`;
+                  list.appendChild(listItem);
+                });
+                resultDiv.appendChild(list);
+              } else {
+                resultDiv.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
+              }
+
+              resultsContainer.appendChild(resultDiv);
+            });
+          } else {
+            resultsContainer.innerHTML = "<p>Ничего не найдено.</p>";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
