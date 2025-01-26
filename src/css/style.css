@@ -116,7 +116,6 @@ main {
   color: #333;
 }
 
-
 /* ОСНОВНАЯ КАРТИНКА НА ГЛАВНОЙ СТРАНИЦЕ */
 .main-poster0 {
   display: flex; /* Используем Flexbox для позиционирования */
@@ -220,13 +219,6 @@ td a:hover {
   text-decoration: underline;
 }
 
-/* ЗВЕЗДЫ */
-/* .stars {
-  color: gold !important;
-  font-size: 20px !important;
-  text-shadow: 1px 1px 2px black;
-} */
-
 /* ИНФОРМАЦИЯ О ДАТЕ */
 .date-info {
   text-align: center;/* Центрируем текст */
@@ -326,9 +318,7 @@ a.larisbtn:hover{
   width: 210px; /* Ustaw szerokość okienka */
   font-style: italic;     /* Pochylony tekst */
   font-weight: 300;       /* Cienka czcionka */
-  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
   transform: translateX(-66%);
-  font-size: 1a;
 
   background-color: rgba(173, 179, 233, 0.6);
   color: rgb(3, 0, 0);

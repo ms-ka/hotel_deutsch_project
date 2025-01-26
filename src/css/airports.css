@@ -24,16 +24,9 @@
           /* chasy */
           
           .date-info {
-            /* text-align: center; */
-            /* Центрируем текст */
-            /* margin-top: 20px; */
-            /* Отступ сверху */
+            text-align: right;
             font-size: 18px;
-            /* Размер шрифта */
             color: #555;
-            /* Цвет текста */
-            font-family: Arial, sans-serif;
-            /* Шрифт */
           }
           
           .date-info span {
