@@ -15,14 +15,14 @@
 <body>
   <header>
     <div class="logos">
-      <p>Hotelportal</p>
       <span>Hotel-Deutschland.de</span>
+      <p>Портал отелей</p>
     </div>
     <nav class="nav">
-      <a href="https://www.google.com/maps/place/Germany/" target="_blank">KARTE VON DEUNTSCHLAND</a>
-      <a href="https://www.dwd.de/DE/Home/home_node.html" target="_blank">WETTERKARTE</a>
-      <a href="search.html">SUCHE</a>
-      <a href="about.html">ÜBER UNS</a>
+      <a href="about.html">О НАС</a>
+      <a href="https://www.google.com/maps/place/Germany/" target="_blank">КАРТА ГЕРМАНИИ</a>
+      <a href="https://www.dwd.de/DE/Home/home_node.html" target="_blank">КАРТА ПОГОДЫ</a>
+      <a href="search.html">ПОИСК</a>
     </nav>
   </header>
 
@@ -250,12 +250,12 @@
     <div class="accordion" id="footerAccordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingCities">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCities"
-            aria-expanded="true" aria-controls="collapseCities">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCities"
+            aria-expanded="false" aria-controls="collapseCities">
             КУЛЬТУРА
           </button>
         </h2>
-        <div id="collapseCities" class="accordion-collapse collapse show" aria-labelledby="headingCities"
+        <div id="collapseCities" class="accordion-collapse collapse" aria-labelledby="headingCities"
           data-bs-parent="#footerAccordion">
           <div class="accordion-body">
             <a href="kunst.html">ИСКУССТВО</a><br> 
@@ -297,30 +297,47 @@
           data-bs-parent="#footerAccordion">
           <div class="accordion-body">
             <a href="polizei.html">ПОЛИЦИЯ</a><br>
-            <a href="feuerwehren.html">ПОЖАРНЫЕ</a>
+            <a href="feuerwehren.html">ПОЖАРНАЯ СЛУЖБА</a>
           </div>
         </div>
       </div>
     </div>
+</footer>
 
-    <div class="copyright" style="margin-top: 20px; text-align: center;">
-      <span>Hotel-Deutschland.de ist ein Angebot für Touristen in Deutschland.</span>
-    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function updateDateTime() {
       const dateInfo = document.querySelector('.date-info');
-      const daysOfWeek = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  
+      // Массив с месяцами в склонённой форме
+      const months = [
+        'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+        'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+      ];
+      // Массив с русскими днями недели
+      const daysOfWeek = [
+        'Воскресенье', 'Понедельник', 'Вторник', 'Среда', 
+        'Четверг', 'Пятница', 'Суббота'
+      ];
+  
       const now = new Date();
+  
+      // Получение текущего дня недели, числа, месяца и года
       const dayOfWeek = daysOfWeek[now.getDay()];
       const day = now.getDate();
-      const month = now.toLocaleString('de', { month: 'long' });
+      const month = months[now.getMonth()]; // Склонённый месяц
       const year = now.getFullYear();
-      const time = now.toLocaleTimeString('de');
+  
+      // Формат времени (часы:минуты:секунды)
+      const time = now.toLocaleTimeString('ru');
+  
+      // Обновление содержимого элемента
       dateInfo.innerHTML = `<span>${dayOfWeek}, ${day} ${month} ${year}</span> <span>${time}</span>`;
     }
+  
+    // Обновляем время каждую секунду
     setInterval(updateDateTime, 1000);
     updateDateTime();
   </script>

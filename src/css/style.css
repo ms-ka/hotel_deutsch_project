@@ -39,7 +39,7 @@ header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); /* Тень для хедера */
 }
 
-.logos>p {
+.logos > p {
   margin-top: 4px; /* Отступ сверху */
   font-weight: bold; /* Жирный шрифт */
 }
@@ -65,15 +65,15 @@ nav {
 }
 
 .nav-to-main a {
-  text-decoration: underline; 
+  text-decoration: underline;
   font-size: 18px;
   margin-left: 10px;
   color: #922323;
 }
-   /* text: na glavnuyu */
-   .text-center {
-    font-weight: bold;
-    padding-bottom: 15px;
+/* text: na glavnuyu */
+.text-center {
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 /* ЛОГОТИПЫ */
@@ -116,7 +116,6 @@ main {
   color: #333;
 }
 
-
 /* ОСНОВНАЯ КАРТИНКА НА ГЛАВНОЙ СТРАНИЦЕ */
 .main-poster0 {
   display: flex; /* Используем Flexbox для позиционирования */
@@ -128,7 +127,7 @@ main {
   margin-top: 0px; /* Отступ сверху */
   position: relative; /* Позиционирование для дочерних элементов */
   background: #454545; /* Цвет фона */
-  background-image: url('/images/0.png') !important; /* Фоновое изображение */
+  background-image: url("/images/0.png") !important; /* Фоновое изображение */
   background-position: center; /* Центрируем фоновое изображение */
   background-size: cover; /* Фоновое изображение будет покрывать весь контейнер */
 }
@@ -147,7 +146,7 @@ footer {
   box-sizing: border-box; /* Учитываем padding и border в ширине */
   width: 100%;
   padding: 17px 24px; /* Отступы внутри футера */
-  height: 385px; /* Высота футера */
+  height: 260px; /* Высота футера */
   background-color: #545454; /* Цвет фона футера */
 }
 
@@ -229,15 +228,15 @@ td a:hover {
 
 /* ИНФОРМАЦИЯ О ДАТЕ */
 .date-info {
-  text-align: center;/* Центрируем текст */
-  margin-top: 20px;/* Отступ сверху */
-  font-size: 18px;/* Размер шрифта */
-  color: #555;/* Цвет текста */
-  font-family: Arial, sans-serif;/* Шрифт */
+  text-align: center; /* Центрируем текст */
+  margin-top: 20px; /* Отступ сверху */
+  font-size: 18px; /* Размер шрифта */
+  color: #555; /* Цвет текста */
+  font-family: Arial, sans-serif; /* Шрифт */
 }
 
 .date-info span {
-  padding: 10px 20px;/* Полупрозрачный фон */
+  padding: 10px 20px; /* Полупрозрачный фон */
   border-radius: 10px; /* Закругленные углы */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта глубины */
 }
@@ -271,7 +270,7 @@ td a:hover {
 
 .accordion-item {
   border: 1px solid #666; /* Рамка вокруг элемента */
-  border-radius: 5px;  /* Закругленные углы */
+  border-radius: 5px; /* Закругленные углы */
 }
 
 .accordion-collapse {
@@ -296,17 +295,17 @@ td a:hover {
 }
 
 a.larisbtn {
-color: #fff;
+  color: #fff;
   background-color: #666;
   padding: 0.2em;
   margin-top: 0.3em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0.3em;
 }
-a.larisbtn:hover{ 
+a.larisbtn:hover {
   background-color: #922323;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px); 
+  transform: translateY(-4px);
 }
 
 /* ссылка jpg */
@@ -321,12 +320,12 @@ a.larisbtn:hover{
 .city:hover::after {
   content: attr(data-info);
   position: absolute;
-  bottom: 130%; 
+  bottom: 130%;
 
   width: 210px; /* Ustaw szerokość okienka */
-  font-style: italic;     /* Pochylony tekst */
-  font-weight: 300;       /* Cienka czcionka */
-  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */  
+  font-style: italic; /* Pochylony tekst */
+  font-weight: 300; /* Cienka czcionka */
+  font-family: Arial, sans-serif; /* Wybór rodziny czcionek */
   transform: translateX(-66%);
   font-size: 1a;
 
@@ -346,7 +345,7 @@ a.larisbtn:hover{
   padding: 90px 110px;
 }
 
-.main-wrapper>h2 {
+.main-wrapper > h2 {
   font-weight: 700;
   font-size: 22px;
   line-height: 118%;
@@ -378,11 +377,11 @@ h4 {
 }
 
 .nav-bottom {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 46px 110px;
 }
 
-.nav-icons__wrapper>i {
+.nav-icons__wrapper > i {
   margin-bottom: 3px;
 }
 
@@ -400,7 +399,7 @@ h4 {
   margin-bottom: 17px;
 }
 
-.logo-wrapper>img {
+.logo-wrapper > img {
   height: 40px;
 }
 
@@ -422,7 +421,7 @@ h4 {
 }
 
 @media (max-width: 950px) {
-  nav>a {
+  nav > a {
     display: none;
   }
 }

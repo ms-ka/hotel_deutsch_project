@@ -1,0 +1,19 @@
+{
+  "name": "hotel_deutsch_project",
+  "version": "1.0.0",
+  "description": "Projekt der AIT Fortbildung",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --format eslint-formatter-table",  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^8.57.1",
+    "eslint-formatter-table": "^7.32.1",
+    "globals": "^15.14.0"
+  }
+}
