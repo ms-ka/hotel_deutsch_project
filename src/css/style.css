@@ -76,6 +76,12 @@ nav {
   padding-bottom: 15px;
 }
 
+.link-margin {
+  align-items: center;
+  text-decoration: underline;
+  color: #922323;
+}
+
 /* ЛОГОТИПЫ */
 .logos {
   flex-direction: column; /* Логотипы будут располагаться вертикально */
@@ -423,4 +429,5 @@ h4 {
   nav > a {
     display: none;
   }
+  
 }
