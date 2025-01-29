@@ -101,14 +101,14 @@ main {
 
 /* kartinka goroda */
 .grid-gallery__card {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-top: 5px;
   text-align: center; /* Выравнивание текста по центру */
 }
 
 /* nazvanie goroda */
 .grid-gallery__card h4 {
-  margin-bottom: 5px; /* Отступ снизу */
+  margin-bottom: 10px; /* Отступ снизу */
   margin-top: 5px;
   font-weight: bold; /* Жирное начертание */
 }

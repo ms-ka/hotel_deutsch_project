@@ -37,7 +37,7 @@
 
         /* airports carts */
         .airport-card {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
             /* border-radius: 8px; */
             overflow: hidden;
@@ -57,6 +57,8 @@
         .airport-info h2 {
             font-size: 12px;
             margin-bottom: 10px;
+            font-weight: bold; /* Жирное начертание */
+
         }
 
         /* knopki v karte */
@@ -68,6 +70,8 @@
             margin-top: 0.3em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
             border-radius: 0.3em;
+            font-weight: bold; /* Жирное начертание */
+
         }
 
         .btn-airport:hover {
