@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мобильные операторы в Германии</title>
+  <title>Почта Германии</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,7 +38,7 @@
       position: relative;
       width: 100%;
       height: 300px;
-      background: url('images/mobilfunk.jpg') no-repeat center center/cover;
+      background: url('images/post.jpg') no-repeat center center/cover;
     }
 
     h1 {
@@ -48,15 +48,17 @@
     }
 
     main {
-      padding: 20px;
-      flex-grow: 1;
+      padding: 100px 0 0 0; /* Уменьшаем только верхний отступ */
+      flex-grow: 1; /* Растягиваем на всё доступное пространство */
       background-color: rgb(245, 236, 211); /* Золотая заливка */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Распределяем пространство */
     }
 
     .button-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 кнопки в ряду */
-      gap: 20px;
+      display: flex;
+      justify-content: center; /* Центрируем кнопку */
       padding: 20px;
     }
 
@@ -69,6 +71,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      width: 60%; /* Установим ширину кнопки */
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
@@ -80,9 +83,8 @@
     footer {
       background-color: rgb(161, 145, 83);
       color: white;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
-      margin-top: auto;
     }
 
     footer a {
@@ -98,41 +100,27 @@
 <body>
   <header>
     <div class="logos">
-      
+    
     </div>
     <nav>
       <a href="index.html">ГЛАВНАЯ</a>
-   
+    
     </nav>
   </header>
 
   <div class="main-banner"></div>
 
-  <h1>Мобильные операторы в Германии</h1>
+  <h1>Почта Германии</h1>
 
-  <main>
+  <main class="container">
     <section class="button-container">
-      <a href="https://www.telekom.de" target="_blank">Telekom</a>
-      <a href="https://www.vodafone.de" target="_blank">Vodafone</a>
-      <a href="https://www.o2online.de" target="_blank">O2</a>
-      <a href="https://www.congstar.de" target="_blank">Congstar</a>
-      <a href="https://www.alditalk.de" target="_blank">Aldi Talk</a>
-      <a href="https://www.blau.de" target="_blank">Blau</a>
-      <a href="https://www.freenet.de" target="_blank">Freenet</a>
-      <a href="https://www.lycamobile.de" target="_blank">Lycamobile</a>
-      <a href="https://www.1und1.de" target="_blank">1&1 Drillisch</a>
-      <a href="https://www.tchibo.de/mobil" target="_blank">Tchibo Mobil</a>
-      <a href="https://www.lebara.de" target="_blank">Lebara</a>
-      <a href="https://www.sim.de" target="_blank">sim.de</a>
-      <a href="https://www.ortelmobile.de" target="_blank">Ortel Mobile</a>
-      <a href="https://www.penny-mobil.de" target="_blank">Penny Mobil</a>
-      <a href="https://www.norma-connect.de" target="_blank">Norma Connect</a>
-      <a href="https://www.netzclub.de" target="_blank">Netzclub</a>
+      <a href="https://www.deutschepost.de/de.html" class="icon ellipse-button" target="_blank">Почта Германии</a>
     </section>
+    <div style="flex-grow: 1;"></div> <!-- Добавленный элемент для занимания свободного пространства -->
   </main>
 
   <footer>
-    <p>Оставайтесь на связи!</p>
+    <p>Оставайтесь счастливыми!</p>
   </footer>
 </body>
 </html>
