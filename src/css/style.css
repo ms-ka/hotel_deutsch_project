@@ -109,7 +109,6 @@ main {
 
 /* Стиль для иконки */
 .grid-gallery__icon {
-  position: absolute; /* Абсолютное позиционирование для иконки */
   top: 10px;
   right: 10px;
   font-size: 24px;
@@ -196,7 +195,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-}
+  margin: 0 auto;  /* Wyśrodkowanie poziome */
+  max-width: 80%;  /* Maksymalna szerokość, żeby tabela nie rozciągała się na całą szerokość */
+  border: 1px solid #ddd;  /* Cienka ramka wokół tabeli */
+  border-radius: 10px;  /* Zaokrąglone rogi tabeli */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Cień pod tabelą */
+  }
 
 th,
 td {
@@ -204,19 +208,22 @@ td {
   padding: 8px;
   text-align: left;
 }
-
-th {
-  background-color: #7787a8;
-  font-weight: bold;
-}
+  th {
+    background-color: #7787a8; /* Kolor tła nagłówków */
+    color: white;  /* Kolor tekstu */
+    padding: 12px 15px;  /* Dodatkowa przestrzeń wewnętrzna */
+    text-align: left;  /* Wyrównanie tekstu do lewej */
+    font-weight: bold;  /* Wzmocnienie tekstu */
+    border-radius: 10px 10px 0 0;  /* Zaokrąglone górne rogi */
+  }
 
 td a {
   color: #922323;
   text-decoration: none;
 }
 
-td a:hover {
-  text-decoration: underline;
+td:hover {
+  background-color: #CEC09E  /* Delikatna zmiana koloru tła przy najechaniu myszką */
 }
 
 /* ИНФОРМАЦИЯ О ДАТЕ */
@@ -303,28 +310,28 @@ a.larisbtn:hover {
   transform: translateY(-4px);
 }
 
-/* ссылка jpg */
+/* ссылка jpg - przed najechaniem*/
 .city {
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  cursor: grab;
   text-align: center;
 }
 
 /* текст после наведения мыши на название города */
 .city:hover::after {
   content: attr(data-info);
-  position: absolute;
+  position: absolute; /*ustawia pozycje w stosunku do city*/
   bottom: 130%;
-
-  width: 210px; /* Ustaw szerokość okienka */
-
+  font-style: italic;
+  width: 220px; /* Ustaw szerokość okienka */
+  font-weight: lighter;
   transform: translateX(-66%);
-
   background-color: rgba(173, 179, 233, 0.6);
   color: rgb(3, 0, 0);
   padding: 3px 2px;
-  border-radius: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
   white-space: normal; /* Zapewnia zawijanie tekstu */
   height: auto; /* Wysokość dopasowuje się do zawartości */
   z-index: 1;
