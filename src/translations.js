@@ -222,8 +222,8 @@ export function changeLanguage(lang) {
   cityDescriptions[13].setAttribute("data-info", translations[lang].dusseldorfDesc);
   cityDescriptions[14].setAttribute("data-info", translations[lang].stuttgartDesc);
   cityDescriptions[15].setAttribute("data-info", translations[lang].munichDesc);
-  cityDescriptions[15].setAttribute("data-info", translations[lang].brandenburgDesc);
-  cityDescriptions[15].setAttribute("data-info", translations[lang].bonnDesc);
+  cityDescriptions[16].setAttribute("data-info", translations[lang].brandenburgDesc);
+  cityDescriptions[17].setAttribute("data-info", translations[lang].bonnDesc);
 
 
   const hotelButtons = document.querySelectorAll(".larisbtn");
