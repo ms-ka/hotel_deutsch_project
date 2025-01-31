@@ -97,8 +97,6 @@ main {
 .grid-gallery {
   display: flex; /* Используем Flexbox */
   flex-wrap: wrap; /* Элементы будут оборачиваться в новые строки */
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 /* kartinka goroda */
