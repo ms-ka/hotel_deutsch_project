@@ -184,11 +184,15 @@ export function changeLanguage(lang) {
   document.querySelector(".nav a:nth-child(2)").innerText = translations[lang].weather;
   document.querySelector(".nav a:nth-child(3)").innerText = translations[lang].search;
   document.querySelector(".nav a:nth-child(4)").innerText = translations[lang].about;
+  // find by id ID
 
   const cityNames = document.querySelectorAll(".city");
   cityNames[0].innerText = translations[lang].berlinName;
-  cityNames[1].innerText = translations[lang].hamburgName;
+  cityNames[17].innerText = translations[lang].bonnName;
+  cityNames[16].innerText = translations[lang].brandenburgName;
   cityNames[2].innerText = translations[lang].bremenName;
+
+  cityNames[1].innerText = translations[lang].hamburgName;
   cityNames[3].innerText = translations[lang].hannoverName;
   cityNames[4].innerText = translations[lang].kielName;
   cityNames[5].innerText = translations[lang].schwerinName;
