@@ -8,7 +8,7 @@ export const translations = {
     berlinName: "БЕРЛИН",
     berlinDesc: "Город, где история встречается с современностью! От Бранденбургских ворот до последних трендов в искусстве и технологиях. Берлин постоянно вдохновляет! 🌆",
     bonnName: "БОНН",
-    bonnDesc: "Город истории и красоты! Открой для себя старинные улочки, живописные виды на Рейн и атмосферу, где прошлое встречается с настоящим. 🌸",
+    bonnDesc: "Город истории и красоты! Открой для себя старинные улочки, живописные виды на Рейн и атмосферу, где прошлое встречается с настоящим и вдохновляет. 🌸",
     hamburgName: "ГАМБУРГ",
     hamburgDesc: "Город свободы и моря! Приезжай за вдохновением и впечатлениями! Здесь каждый найдёт что-то для себя – от прогулок по Эльбе до ярких огней ночной жизни! ⛵",
     bremenName: "БРЕМЕН",
@@ -20,7 +20,7 @@ export const translations = {
     kielName: "КИЛЬ",
     kielDesc: "Город на берегу Балтики, полный свежего морского воздуха и динамичной атмосферы! Открой для себя старинный порт, прогулки по набережной и очаровательные уличные кафе. 🚢",
     schwerinName: "ШВЕРИН",
-    schwerinDesc: "Город озёр и сказочных замков! Прогуляйся вдоль водоёмов, открой для себя историческую архитектуру и почувствуй атмосферу уюта и спокойствия. 🏰",
+    schwerinDesc: "Город озёр и сказочных замков! Прогуляйся вдоль водоёмов, открой для себя историческую архитектуру и почувствуй атмосферу уюта, спокойствия, вдохновения и гармонии. 🏰",
     magdeburgName: "МАГДЕБУРГ",
     magdeburgDesc: "Город с богатой историей и динамичной атмосферой! Открой для себя средневековые здания, красивые парки и современные районы. Здесь встречаются прошлое и будущее! 🏙️",
     potsdamName: "ПОТСДАМ",
@@ -30,19 +30,52 @@ export const translations = {
     erfurtName: "ЭРФУРТ",
     erfurtDesc: "Город с атмосферой средневековой магии! Прогуляйся по старинным улочкам, открой для себя великолепие собора и почувствуй дух истории на каждом шагу. 💒",
     wiesbadenName: "ВИСБАДЕН",
-    wiesbadenDesc: "Город термальных источников и элегантности! Наслаждайся роскошными курортами, исторической архитектурой и атмосферой спокойствия. 🍀",
+    wiesbadenDesc: "Город термальных источников и элегантности! Наслаждайся роскошными курортами, исторической архитектурой и атмосферой спокойствия, умиротворения и уюта. 🍀",
     mainzName: "МАЙНЦ",
     mainzDesc:"Город с духом истории и культурных традиций! Прогуляйся по старинным улочкам, открой для себя живописные площади и насладись атмосферой этого уникального города. 🏰",
     saarbruckenName: "СААРБРЮКЕН",
     saarbruckenDesc: "Город, где переплетаются французская и немецкая культуры! Наслаждайся уютными кафе, красивыми улицами и атмосферой, полной уникальных традиций. 🌍",
     dusseldorfName: "ДЮССЕЛЬДОРФ",
-    dusseldorfDesc:"Город где встречаются история и современность! Прогуляйся по старому городу, открой для себя средневековые улицы и живописные площади. ⛲",
+    dusseldorfDesc: "Город где встречаются история и современность! Прогуляйся по старому городу, открой для себя средневековые улицы, живописные площади и атмосферу. ⛲",
     stuttgartName: "ШТУТГАРТ",
     stuttgartDesc: "Город, инноваций и зелени! Открой для себя современные музеи, живописные парки и уникальную атмосферу, где технологии встречаются с природой. 🌿",
     munichName: "МЮНХЕН",
     munichDesc:"Город традиций и современности! Наслаждайся атмосферой пивных садов, исследуй культурные сокровища и не упусти шанс увидеть великолепие Альп. 🍺",
     hotels: "отели",
     culture: "КУЛЬТУРА",
+    art: "ИСКУССТВО",
+    services: "УСЛУГИ",
+    banks: "БАНКИ",
+    post: "ПОЧТА",
+    customs: "ТАМОЖНЯ",
+    carsharing: "КАРШЕРИНГ",
+    insurance: "СТРАХОВАНИЕ",
+    airplane: "АВИАСООБЩЕНИЕ",
+    shopping: "ТОРГОВЫЕ СЕТИ",
+    mobile: "МОБИЛЬНЫЕ ОПЕРАТОРЫ",
+    rail: "ЖЕЛЕЗНОДОРОЖНОЕ СООБЩЕНИЕ",
+    emergency: "ЭКСТРЕННЫЕ СЛУЖБЫ",
+    police: "ПОЛИЦИЯ",
+    fireDep: "ПОЖАРНАЯ СЛУЖБА",
+    january: 'января',
+    february: 'февраля',
+    march: 'марта',
+    april: 'апреля',
+    may: 'мая',
+    june: 'июня',
+    july: 'июля',
+    august: 'августа',
+    september:'сентября',
+    october: 'октября',
+    november: 'ноября',
+    december: 'декабря',
+    sunday: 'Воскресенье',
+    monday: 'Понедельник',
+    tuesday:'Вторник',
+    wednesday: 'Среда', 
+    thursday: 'Четверг',
+    friday:'Пятница',
+    saturday: 'Суббота',
   },
   de: {
     title: "Bundesländer und Städte Deutschlands",
@@ -86,7 +119,42 @@ export const translations = {
     stuttgartDesc: "Eine Stadt der Innovationen und des Grüns! Entdecke moderne Museen, malerische Parks und eine einzigartige Atmosphäre, in der Technologie auf Natur trifft. 🌿",  
     munichName: "MÜNCHEN",
     munichDesc: "Eine Stadt der Traditionen und Moderne! Genieße die Atmosphäre der Biergärten, entdecke kulturelle Schätze und verpasse nicht die Gelegenheit, die Schönheit der Alpen zu erleben. 🍺",  
-    hotels: "hotels"
+    hotels: "hotels",
+    customs: "ZOLL",
+    culture: "KULTUR",
+    art: "KUNST",
+    services: "DIENSTLEISTUNGEN",
+    banks: "BANKEN",
+    post: "POSTÄMTER",
+    carsharing: "CARSHARING",
+    insurance: "VERSICHERUNG",
+    airplane: "LUFTVERKEHR",
+    shopping: "HANDELSNETZ",
+    mobile: "MOBILFUNKANBIETER",
+    rail: "SCHIENENNETZ",
+    emergency: "NOTFALLDIENSTE",
+    police: "POLIZEI",
+    fireDep: "FEUERWEHR",
+    january: 'Januar',
+    february: 'Februar',
+    march: 'März',
+    april: 'April',
+    may: 'Mai',
+    june: 'Juni',
+    july: 'Juli',
+    august: 'August',
+    september:'September',
+    october: 'Oktober',
+    november: 'November',
+    december: 'December',
+    sunday: 'Sontag',
+    monday: 'Montag',
+    tuesday:'Dienstag',
+    wednesday: 'Mittwoch', 
+    thursday: 'Donnerstag',
+    friday:'Freitag',
+    saturday: 'Samstag',
+
   },
   en: {
     title: "Federal States and Cities of Germany",
@@ -130,7 +198,41 @@ export const translations = {
     stuttgartDesc: "A city of innovation and greenery! Discover modern museums, picturesque parks, and a unique atmosphere where technology meets nature. 🌿",  
     munichName: "MUNICH",
     munichDesc: "A city of tradition and modernity! Enjoy the atmosphere of beer gardens, explore cultural treasures, and don't miss the chance to see the beauty of the Alps. 🍺",  
-    hotels: "hotels"
+    hotels: "hotels",
+    culture: "CULTURE",
+    art: "ART",
+    services: "SERVICES",
+    banks: "BANKS",
+    post: "POST",
+    customs: "CUSTOMS",
+    carsharing: "CARSHARING",
+    insurance: "INSURANCE",
+    airplane: "AIR TRAFFIC",
+    shopping: "RETAIL NETWORKS",
+    mobile: "MOBILE OPERATORS",
+    rail: "RAILWAYS",
+    emergency: "EMERGENCY SERVICES",
+    police: "POLICE",
+    fireDep: "FIRE RESCUE SERVICES",
+    january: 'january',
+    february: 'february',
+    march: 'march',
+    april: 'april',
+    may: 'may',
+    june: 'june',
+    july: 'july',
+    august: 'august',
+    september:'september',
+    october: 'october',
+    november: 'november',
+    december: 'december',
+    sunday: 'sunday',
+    monday: 'monday',
+    tuesday:'tuesday',
+    wednesday: 'wednesday', 
+    thursday: 'thursday',
+    friday: 'friday',
+    saturday: 'saturday',
   },
   pl: {
     title: "Kraje związkowe i miasta Niemiec",
@@ -174,17 +276,65 @@ export const translations = {
     stuttgartDesc: "Miasto innowacji i zieleni! Odkryj nowoczesne muzea, malownicze parki i unikalną atmosferę, gdzie technologia spotyka się z naturą. 🌿",  
     munichName: "MONACHIUM",
     munichDesc: "Miasto tradycji i nowoczesności! Ciesz się atmosferą ogródków piwnych, odkrywaj skarby kultury i nie przegap szansy, by zobaczyć piękno Alp. 🍺",  
-    hotels: "hotele"
+    hotels: "hotele",
+    culture: "KULTURA",
+    art: "SZTUKA",
+    services: "USŁUGI",
+    banks: "BANKI",
+    post: "POCZTA",
+    customs: "STRAŻ CELNA",
+    carsharing: "CARSHARING",
+    insurance: "UBEZPIECZENIA",
+    airplane: "POŁĄCZENIA LOTNICZE",
+    shopping: "SIECI HANDLOWE",
+    mobile: "SIECI KOMÓRKOWE",
+    rail: "POŁĄCZENIE KOLEJOWE",
+    emergency: "SŁUŻBY RATUNKOWE",
+    police: "POLICJA",
+    fireDep: "STRAŻ POŻARNA",
+    january: 'styczeń',
+    february: 'luty',
+    march: 'marzec',
+    april: 'kwiecień',
+    may: 'maj',
+    june: 'czerwiec',
+    july: 'lipiec',
+    august: 'sierpień',
+    september:'wrzesień',
+    october: 'pażdziernik',
+    november: 'listopad',
+    december: 'grudzień',
+    sunday: 'niedziela',
+    monday: 'poniedziałek',
+    tuesday:'wtorek',
+    wednesday: 'środa', 
+    thursday: 'czwartek',
+    friday:'piątek',
+    saturday: 'sobota',
   }
 };
 
 export function changeLanguage(lang) {
   document.querySelector("h2").innerText = translations[lang].title;
-  document.querySelector(".nav a:nth-child(1)").innerText = translations[lang].map;
-  document.querySelector(".nav a:nth-child(2)").innerText = translations[lang].weather;
-  document.querySelector(".nav a:nth-child(3)").innerText = translations[lang].search;
-  document.querySelector(".nav a:nth-child(4)").innerText = translations[lang].about;
+  document.querySelector(".nav a:nth-child(1)").innerText = translations[lang].about;
+  document.querySelector(".nav a:nth-child(2)").innerText = translations[lang].map;
+  document.querySelector(".nav a:nth-child(3)").innerText = translations[lang].weather;
+  document.querySelector(".nav a:nth-child(4)").innerText = translations[lang].search;
   // find by id ID
+  document.querySelectorAll('[data-trans]').forEach((element) => {
+      const key = element.getAttribute('data-trans');
+      if (translations[lang] && translations[lang][key]) {
+        element.textContent = translations[lang][key];
+      }
+  });
+
+  document.querySelectorAll('[date-info]').forEach((element) => {
+    const key = element.getAttribute('date-info');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+});
+
 
   const cityNames = document.querySelectorAll(".city");
   cityNames[0].innerText = translations[lang].berlinName;
@@ -225,7 +375,6 @@ export function changeLanguage(lang) {
   cityDescriptions[15].setAttribute("data-info", translations[lang].mainzDesc);
   cityDescriptions[16].setAttribute("data-info", translations[lang].brandenburgDesc);
   cityDescriptions[17].setAttribute("data-info", translations[lang].bonnDesc);
-
 
   const hotelButtons = document.querySelectorAll(".larisbtn");
   hotelButtons.forEach(button => {

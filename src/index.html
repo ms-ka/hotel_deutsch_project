@@ -63,7 +63,7 @@
       <img src="./images/0.png" height="100%" width="100%">
       <div class="overlay"></div>
     </div>
-    <div class="date-info text-end" style="padding: 10px;">
+    <div class="date-info text-end" style="padding: 20px;">
       <span id="current-date-time"></span>
     </div>
 
@@ -282,15 +282,15 @@
     <div class="accordion" id="footerAccordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingCities">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseCities" aria-expanded="false" aria-controls="collapseCities">
-            КУЛЬТУРА
-          </button>
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCities"
+            aria-expanded="false" aria-controls="collapseCities">
+            <span data-trans="culture">КУЛЬТУРА</span>
+        </button>
         </h2>
         <div id="collapseCities" class="accordion-collapse collapse" aria-labelledby="headingCities"
           data-bs-parent="#footerAccordion">
           <div class="accordion-body">
-            <a href="art.html">ИСКУССТВО</a><br>
+            <a href="art.html" data-trans="art">ИСКУССТВО</a><br>
           </div>
         </div>
       </div>
@@ -299,21 +299,21 @@
         <h2 class="accordion-header" id="headingServices">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">
-            УСЛУГИ </button>
+            <span data-trans="services">УСЛУГИ</span> 
+        </button>
         </h2>
         <div id="collapseServices" class="accordion-collapse collapse" aria-labelledby="headingServices"
           data-bs-parent="#footerAccordion">
           <div class="accordion-body">
-            <a href="banken.html">БАНКИ</a><br>
-            <a href="post.html">ПОЧТА</a><br>
-            <a href="zoll.html">ТАМОЖНЯ</a><br>
-            <a href="carsharing.html">КАРШЕРИНГ</a><br>
-            <a href="versicherung.html">СТРАХОВАНИЕ</a><br>
-            <a href="airports.html">АВИАСООБЩЕНИЕ</a><br>
-            <a href="handelsketten.html">ТОРГОВЫЕ СЕТИ</a><br>
-            <a href="mobilfunkanbieter.html">МОБИЛЬНЫЕ ОПЕРАТОРЫ</a><br>
-            <a href="bahn.html">ЖЕЛЕЗНОДОРОЖНОЕ СООБЩЕНИЕ</a><br>
-
+            <a href="banken.html" data-trans="banks">БАНКИ</a><br>
+            <a href="post.html" data-trans="post">ПОЧТА</a><br>
+            <a href="zoll.html" data-trans="customs">ТАМОЖНЯ</a><br>
+            <a href="carsharing.html" data-trans="carsharing">КАРШЕРИНГ</a><br>
+            <a href="versicherung.html" data-trans="insurance">СТРАХОВАНИЕ</a><br>
+            <a href="airports.html" data-trans="airplane">АВИАСООБЩЕНИЕ</a><br>
+            <a href="handelsketten.html" data-trans="shopping">ТОРГОВЫЕ СЕТИ</a><br>
+            <a href="mobilfunkanbieter.html" data-trans="mobile">МОБИЛЬНЫЕ ОПЕРАТОРЫ</a><br>
+            <a href="bahn.html" data-trans="rail">ЖЕЛЕЗНОДОРОЖНОЕ СООБЩЕНИЕ</a><br>
           </div>
         </div>
       </div>
@@ -322,19 +322,19 @@
         <h2 class="accordion-header" id="headingEmergency">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseEmergency" aria-expanded="false" aria-controls="collapseEmergency">
-            ЭКСТРЕННЫЕ СЛУЖБЫ
+            <span data-trans="emergency">ЭКСТРЕННЫЕ СЛУЖБЫ</span>
           </button>
         </h2>
         <div id="collapseEmergency" class="accordion-collapse collapse" aria-labelledby="headingEmergency"
           data-bs-parent="#footerAccordion">
           <div class="accordion-body">
-            <a href="polizei.html">ПОЛИЦИЯ</a><br>
-            <a href="feuerwehren.html">ПОЖАРНАЯ СЛУЖБА</a>
+            <a href="polizei.html" data-trans="police">ПОЛИЦИЯ</a><br>
+            <a href="feuerwehren.html" data-trans="fireDep">ПОЖАРНАЯ СЛУЖБА</a>
           </div>
         </div>
       </div>
     </div>
-  </footer>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
