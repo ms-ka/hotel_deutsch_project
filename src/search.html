@@ -1,225 +1,220 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Поиск по сайту</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
-      .top-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #805a0061;
-        padding: 10px 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .top-bar h4 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: bold;
-        color: #333;
-      }
-
-      .top-bar .search-container {
-        display: flex;
-        align-items: center;
-      }
-
-      .search-bar {
-        display: flex;
-        align-items: center;
-        background-color: #805a0061;
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      .search-bar input[type="text"] {
-        width: 200px;
-        padding: 5px;
-        border: none;
-        outline: none;
-        border-radius: 4px;
-        margin-right: 10px;
-      }
-
-      .search-bar button {
-        padding: 5px 10px;
-        background-color: #90aebd;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .search-bar button:hover {
-        background-color: #269d77;
-      }
-
-      .main-link {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        padding: 5px 10px;
-        background-color: #f3f3f3;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-
-      .main-link:hover {
-        background-color: #e0e0e0;
-      }
-
-      main {
-        margin-top: 80px;
-        padding: 20px;
-      }
-
-      main h4 {
-  margin-top: 0px; /* Уменьшите значение, чтобы текст поднялся выше */
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск по сайту</title>
+  <style>
+    header {
+  display: flex;
+  justify-content: flex-end; /* Перемещает элементы вправо */
+  align-items: center;
+  background-color: rgb(161, 145, 83);
+  padding: 10px 20px;
+  color: white;
 }
 
-      #results .result {
-        margin-bottom: 15px;
-      }
+header nav {
+  display: flex;
+  justify-content: flex-end; /* Размещает ссылки справа */
+  width: 100%;
+}
 
-      footer {
-        text-align: center;
-        margin-top: 40px;
-        padding: 10px;
-        background-color: #805a0061;
-        border-top: 1px solid #805a0061;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="top-bar">
-      <h4>Страница поиска</h4>
-      <a href="index.html" class="main-link">ГЛАВНАЯ</a>
-      <div class="search-container">
-        <div class="search-bar">
-          <input type="text" id="search" placeholder="Введите запрос..." />
-          <button type="button" onclick="performSearch()">Найти</button>
-        </div>
-      </div>
+header nav a {
+  color: white;
+  margin-left: 15px; /* Добавляем отступ слева, чтобы не было слипания */
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(161, 145, 83);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: url('images/search.jpg') no-repeat center 80%/cover;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    main {
+      padding: 50px 20px;
+      flex-grow: 1;
+      background-color: rgb(245, 236, 211);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      background-color: rgb(161, 145, 83);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+      background-color: #6b5330;
+    }
+
+    #results {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: rgb(161, 145, 83);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">ГЛАВНАЯ</a>
+    </nav>
+  </header>
+
+  <div class="main-banner"></div>
+
+  <h1>Поиск по сайту</h1>
+
+  <main>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Введите запрос...">
+      <button onclick="performSearch()">Найти</button>
     </div>
+    <div id="results"></div>
+  </main>
 
-    <main>
-      <h4>Поиск по сайту</h4>
-      <div id="results"></div>
-    </main>
+  <footer>
+    <p>&copy; 2025 Портал отелей / Hotel-Deutschland.de</p>
+  </footer>
 
-    <footer>
-      <p>&copy; 2025 Портал отелей / Hotel-Deutschland.de</p>
-    </footer>
-
-    <script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get("query");
+  
+      if (query) {
+        document.getElementById("search").value = query;
+        performSearch();
+      }
+    });
+  
+    function performSearch() {
+      const query = document.getElementById("search").value.trim().toLowerCase();
+      const resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+  
       const data = [
-        {
-          title: "Главная страница",
-          content: "Добро пожаловать на наш сайт!",
-          link: "index.html",
-        },
-        {
-          title: "Услуги",
-          content: [
-            { name: "Банки", link: "banken.html" },
-            { name: "Почта", link: "https://www.deutschepost.de/" },
-            { name: "Таможня", link: "https://www.zoll.de/" },
-            { name: "Каршеринг", link: "carsharing.html" },
-            { name: "Страхование", link: "versicherung.html" },
-            { name: "Торговые сети", link: "handelsketten.html" },
-            { name: "Авиасообщение", link: "airports.html" },
-            { name: "Мобильные операторы", link: "mobilfunkanbieter.html" },
-            {
-              name: "Железнодорожное сообщение",
-              link: "https://www.bahn.com/",
-            },
-          ],
-        },
-        { title: "О сайте", content: "Hotelportal", link: "about.html" },
-        { title: "БЕРЛИН", content: "Берлин", link: "berlin.html" },
-        { title: "БОНН", content: "Бонн", link: "bonn.html" },
-        {
-          title: "БРАНДЕНБУРГ",
-          content: "Бранденбург",
-          link: "brandenburg.html",
-        },
-        { title: "БРЕМЕН", content: "Бремен", link: "bremen.html" },
-        { title: "ДРЕЗДЕН", content: "Дрезден", link: "dresden.html" },
-        {
-          title: "ДЮССЕЛЬДОРФ",
-          content: "Дюссельдорф",
-          link: "düsseldorf.html",
-        },
-        { title: "ЭРФУРТ", content: "Эрфурт", link: "erfurt.html" },
-        { title: "ГАМБУРГ", content: "Гамбург", link: "hamburg.html" },
-        { title: "ГАННОВЕР", content: "Ганновер", link: "hannover.html" },
-        { title: "КИЛЬ", content: "Киль", link: "kiel.html" },
-        { title: "МАГДЕБУРГ", content: "Магдебург", link: "magdeburg.html" },
-        { title: "МАЙНЦ", content: "Майнц", link: "mainz.html" },
-        { title: "МЮНХЕН", content: "Мюнхен", link: "münchen.html" },
-        { title: "ПОТСДАМ", content: "Потсдам", link: "potsdam.html" },
-        {
-          title: "СААРБРЮКЕН",
-          content: "Саарбрюкен",
-          link: "saarbrücken.html",
-        },
-        { title: "ШВЕРИН", content: "Шверин", link: "schwerin.html" },
-        { title: "ШТУТГАРТ", content: "Штутгарт", link: "stuttgart.html" },
-        { title: "ВИСБАДЕН", content: "Висбаден", link: "wiesbaden.html" },
+        { title: "Главная страница", link: "index.html" },
+        { title: "Банки", link: "banken.html" },
+        { title: "Почта", link: "post.html" },
+        { title: "Таможня", link: "zoll.html" },
+        { title: "Каршеринг", link: "carsharing.html" },
+        { title: "Страхование", link: "versicherung.html" },
+        { title: "Авиасообщение", link: "airports.html" },
+        { title: "Торговые сети", link: "handelsketten.html" },
+        { title: "Мобильные операторы", link: "mobilfunkanbieter.html" },
+        { title: "Железнодорожное сообщение", link: "bahn.html" },
+        { title: "Полиция", link: "polizei.html" },
+        { title: "Пожарная служба", link: "feuerwehren.html" },
+        { title: "Искусство Германии", link: "art.html" },
+        { title: "Берлин", link: "berlin.html" },
+        { title: "Гамбург", link: "hamburg.html" },
+        { title: "Потсдам", link: "potsdam.html" },
+        { title: "Шверин", link: "schwerin.html" },
+        { title: "Дрезден", link: "dresden.html" },
+        { title: "Магдебург", link: "magdeburg.html" },
+        { title: "Ганновер", link: "hannover.html" },
+        { title: "Киль", link: "kiel.html" },
+        { title: "Бремен", link: "bremen.html" },
+        { title: "Эрфурт", link: "erfurt.html" },
+        { title: "Висбаден", link: "wiesbaden.html" },
+        { title: "Дюссельдорф", link: "düsseldorf.html" },
+        { title: "Мюнхен", link: "münchen.html" },
+        { title: "Штутгарт", link: "stuttgart.html" },
+        { title: "Саарбрюккен", link: "saarbrücken.html" },
+        { title: "Майнц", link: "mainz.html" },
+        { title: "Бонн", link: "bonn.html" },
+        { title: "Бранденбург", link: "brandenburg.html" }
       ];
-
-      function performSearch() {
-        const query = document
-          .getElementById("search")
-          .value.trim()
-          .toLowerCase();
-        const resultsContainer = document.getElementById("results");
-        resultsContainer.innerHTML = "";
-
-        if (query) {
-          const results = data.filter(
-            (item) => item.title.toLowerCase() === query
-          );
-
-          if (results.length > 0) {
-            results.forEach((result) => {
-              const resultDiv = document.createElement("div");
-              resultDiv.classList.add("result");
-
-              if (result.title === "Услуги") {
-                resultDiv.innerHTML = `<h2>${result.title}</h2>`;
-                const list = document.createElement("ul");
-                result.content.forEach((service) => {
-                  const listItem = document.createElement("li");
-                  listItem.innerHTML = `<a href="${service.link}" target="_blank">${service.name}</a>`;
-                  list.appendChild(listItem);
-                });
-                resultDiv.appendChild(list);
-              } else {
-                resultDiv.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
-              }
-
-              resultsContainer.appendChild(resultDiv);
-            });
-          } else {
-            resultsContainer.innerHTML = "<p>Ничего не найдено.</p>";
-          }
+  
+      if (query) {
+        const results = data.filter(item => item.title.toLowerCase().includes(query));
+        
+        if (results.length > 0) {
+          results.forEach(result => {
+            const resultDiv = document.createElement("div");
+            resultDiv.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
+            resultsContainer.appendChild(resultDiv);
+          });
+        } else {
+          resultsContainer.innerHTML = "<p>Ничего не найдено.</p>";
         }
       }
-    </script>
-  </body>
+    }
+  </script>
+  
+</body>
 </html>
