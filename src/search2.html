@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск по сайту</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(161, 145, 83);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: url('images/search.jpg') no-repeat center 80%/cover;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    main {
+      padding: 50px 20px;
+      flex-grow: 1;
+      background-color: rgb(245, 236, 211);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      background-color: rgb(161, 145, 83);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+      background-color: #6b5330;
+    }
+
+    #results {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: rgb(161, 145, 83);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">ГЛАВНАЯ</a>
+    </nav>
+  </header>
+
+  <div class="main-banner"></div>
+
+  <h1>Поиск по сайту</h1>
+
+  <main>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Введите запрос...">
+      <button onclick="performSearch()">Найти</button>
+    </div>
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Портал отелей / Hotel-Deutschland.de</p>
+  </footer>
+
+  <script>
+    const data = [
+      { title: "Берлин", link: "berlin.html" },
+      { title: "Гамбург", link: "hamburg.html" },
+      { title: "Потсдам", link: "potsdam.html" },
+      { title: "Шверин", link: "schwerin.html" },
+      { title: "Дрезден", link: "dresden.html" },
+      { title: "Магдебург", link: "magdeburg.html" },
+      { title: "Ганновер", link: "hannover.html" },
+      { title: "Киль", link: "kiel.html" },
+      { title: "Бремен", link: "bremen.html" },
+      { title: "Эрфурт", link: "erfurt.html" },
+      { title: "Висбаден", link: "wiesbaden.html" },
+      { title: "Дюссельдорф", link: "düsseldorf.html" },
+      { title: "Мюнхен", link: "münchen.html" },
+      { title: "Штутгарт", link: "stuttgart.html" },
+      { title: "Саарбрюккен", link: "saarbrücken.html" },
+      { title: "Майнц", link: "mainz.html" },
+      { title: "Бонн", link: "bonn.html" },
+      { title: "Банки", link: "banken.html" },
+      { title: "Почта", link: "post.html" },
+      { title: "Таможня", link: "zoll.html" },
+      { title: "Каршеринг", link: "carsharing.html" },
+      { title: "Страхование", link: "versicherung.html" },
+      { title: "Авиасообщение", link: "airports.html" },
+      { title: "Торговые сети", link: "handelsketten.html" },
+      { title: "Мобильные операторы", link: "mobilfunkanbieter.html" },
+      { title: "Железнодорожное сообщение", link: "bahn.html" },
+      { title: "Полиция", link: "polizei.html" },
+      { title: "Пожарная служба", link: "feuerwehren.html" },
+      { title: "Искусство Германии", link: "art.html" }
+    ];
+
+    function performSearch() {
+      const query = document.getElementById("search").value.trim().toLowerCase();
+      const resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+
+      if (query) {
+        const results = data.filter(item => item.title.toLowerCase().includes(query));
+        if (results.length > 0) {
+          results.forEach(result => {
+            const resultDiv = document.createElement("div");
+            resultDiv.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
+            resultsContainer.appendChild(resultDiv);
+          });
+        } else {
+          resultsContainer.innerHTML = "<p>Ничего не найдено.</p>";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
