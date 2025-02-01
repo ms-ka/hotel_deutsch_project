@@ -4,7 +4,7 @@
   "description": "Projekt der AIT Fortbildung",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --format eslint-formatter-table",  
+    "lint": "eslint . --format eslint-formatter-table",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +15,9 @@
     "eslint": "^8.57.1",
     "eslint-formatter-table": "^7.32.1",
     "globals": "^15.14.0"
+  },
+  "dependencies": {
+    "i18next": "^24.2.2",
+    "react-i18next": "^15.4.0"
   }
 }
