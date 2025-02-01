@@ -1,68 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Такси в Гамбурге</title>
-    <style>
-        /* Стили для таблицы */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #f8f7f7;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #7787a8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Такси в Гамбурге</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(161, 145, 83);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      flex-grow: 1;
+      background-color: rgb(245, 236, 211);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgb(161, 145, 83);
+      color: white;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background: url('images/taxi.jpg') no-repeat center center/cover;
+    }
+
+    footer {
+      background-color: rgb(161, 145, 83);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Такси в Гамбурге</h1>
-    </header>
-    <main>
-        <!-- Картинка такси -->
-        <img src="images/taxi.jpg" alt="Такси в Гамбурге" style="width: 1250px; height: 500px; margin-bottom: 10px;">
-        
-        <!-- Таблица с сервисами такси -->
-        <h2 style="margin-left: 20px;">Сервисы такси</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Название сервиса</th>
-                    <th>Номер телефона</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Hansa Taxi</td>
-                    <td>+49 40 211211</td>
-                </tr>
-                <tr>
-                    <td>Taxi Hamburg</td>
-                    <td>+49 40 666666</td>
-                </tr>
-                <tr>
-                    <td>Best Taxi</td>
-                    <td>+49 40 444444</td>
-                </tr>
-                <tr>
-                    <td>Grossraumtaxi Hamburg</td>
-                    <td>+49 40 5005111</td>
-                </tr>
-                <tr>
-                    <td>Taxi Centrale Hamburg</td>
-                    <td>+49 40 211202</td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+  <header>
+    <h1>Такси в Гамбурге</h1>
+  </header>
+
+  <div class="banner"></div> <!-- Изменено на div с классом для баннера -->
+
+  <main>
+    <h2 style="margin-left: 20px;">Сервисы такси</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Название сервиса</th>
+          <th>Номер телефона</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hansa Taxi</td>
+          <td>+49 40 211211</td>
+        </tr>
+        <tr>
+          <td>Taxi Hamburg</td>
+          <td>+49 40 666666</td>
+        </tr>
+        <tr>
+          <td>Best Taxi</td>
+          <td>+49 40 444444</td>
+        </tr>
+        <tr>
+          <td>Grossraumtaxi Hamburg</td>
+          <td>+49 40 5005111</td>
+        </tr>
+        <tr>
+          <td>Taxi Centrale Hamburg</td>
+          <td>+49 40 211202</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
