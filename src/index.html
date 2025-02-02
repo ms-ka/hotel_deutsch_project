@@ -340,16 +340,17 @@
     function updateDateTime(lang = "ru") {
       const dateInfo = document.querySelector('.date-info')
   
-      // Массив с месяцами в склонённой форме
-      const months = [
-        'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-        'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
-      ];
-      // Массив с русскими днями недели
-      const daysOfWeek = [
-        'Воскресенье', 'Понедельник', 'Вторник', 'Среда', 
-        'Четверг', 'Пятница', 'Суббота'
-      ];
+     // Array with months in the declensed form
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
+
+// Array with abbreviated days of the week
+const daysOfWeek = [
+  'Sun', 'Mon', 'Tue', 'Wed', 
+  'Thu', 'Fri', 'Sat'
+];
   
       const now = new Date();
   
@@ -366,7 +367,7 @@
     dateInfo.innerHTML = `<span>${dayOfWeek}, ${day} ${month} ${year}</span> <span>${time}</span>`;    }
   
     // Обновляем время каждую секунду
-    setInterval(updateDateTime, 1000);
+    setInterval(() => updateDateTime("ru"), 1000);
     updateDateTime();
   </script>
 </body>

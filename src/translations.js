@@ -57,8 +57,8 @@ export const translations = {
     emergency: "ЭКСТРЕННЫЕ СЛУЖБЫ",
     police: "ПОЛИЦИЯ",
     fireDep: "ПОЖАРНАЯ СЛУЖБА",
-    "months": ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
-    "daysOfWeek": ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+    daysOfWeek: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
   },
   de: {
     title: "Bundesländer und Städte Deutschlands",
@@ -118,8 +118,8 @@ export const translations = {
     emergency: "NOTFALLDIENSTE",
     police: "POLIZEI",
     fireDep: "FEUERWEHR",
-    "months": ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-    "daysOfWeek": ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+    months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+    daysOfWeek: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
 
   },
   en: {
@@ -180,8 +180,8 @@ export const translations = {
     emergency: "EMERGENCY SERVICES",
     police: "POLICE",
     fireDep: "FIRE RESCUE SERVICES",
-   "months": ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-    "daysOfWeek": ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    daysOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   },
   pl: {
     title: "Kraje związkowe i miasta Niemiec",
@@ -241,8 +241,8 @@ export const translations = {
     emergency: "SŁUŻBY RATUNKOWE",
     police: "POLICJA",
     fireDep: "STRAŻ POŻARNA",
-   "months": ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'],
-    "daysOfWeek": ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
+    months: ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'],
+    daysOfWeek: ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
   }
 };
 
@@ -252,21 +252,14 @@ export function changeLanguage(lang) {
   document.querySelector(".nav a:nth-child(2)").innerText = translations[lang].map;
   document.querySelector(".nav a:nth-child(3)").innerText = translations[lang].weather;
   document.querySelector(".nav a:nth-child(4)").innerText = translations[lang].search;
+  
   // find by id ID
   document.querySelectorAll('[data-trans]').forEach((element) => {
       const key = element.getAttribute('data-trans');
       if (translations[lang] && translations[lang][key]) {
         element.textContent = translations[lang][key];
       }
-  });
-
-  document.querySelectorAll('[date-info]').forEach((element) => {
-    const key = element.getAttribute('date-info');
-    if (translations[lang] && translations[lang][key]) {
-      element.textContent = translations[lang][key];
-    }
-});
-
+  })
 
   const cityNames = document.querySelectorAll(".city");
   cityNames[0].innerText = translations[lang].berlinName;
